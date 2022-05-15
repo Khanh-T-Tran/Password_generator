@@ -37,12 +37,12 @@ function generatePassword() {
   if(!pswl) {
     alert("Required value");
 
-  } 
-  else if (pswl < 8 || pswl > 128) {
+  } else if (pswl < 8 || pswl > 128) {
     pswl = prompt('You must choose between 8 and 128 characters');
     console.log('Password length' + pswl);
   
   } else {
+   
     cflc = confirm("Will this password contain lower case letters?");
     console.log('Lower case' + cflc);
     cfuc = confirm('Will this password contain upper case letter?');
@@ -51,89 +51,87 @@ function generatePassword() {
     console.log('Number' + cfnum);
     cfSpec = confirm('Will this password contain special characters?');
     console.log('Special character' + cfSpec);
-  };
+  
+  }; 
 
+ 
+   
   if (!cflc && !cfuc && !cfnum && !cfSpec) {
     userChoices = alert('Please choose your password accoring to the criteria!');
 
   } else if (cflc && cfuc && cfnum && cfSpec) {
     userChoices = lower.concat(upper, numbers, special);
     console.log(userChoices);
-
   
   } else if (cflc && cfuc && cfnum) {
     userChoices = lower.concat(upper, numbers);
     console.log(userChoices);
-  }
-  else if (cflc && cfuc && cfSpec) {
+  
+  } else if (cflc && cfuc && cfSpec) {
     userChoices = lower.concat(upper, special);
     console.log(userChoices);
-  }
-  else if (cflc && cfnum && cfSpec) {
+  
+  } else if (cflc && cfnum && cfSpec) {
     userChoices = lower.concat(numbers, special);
     console.log(userChoices);
-  }
-  else if (cfuc && cfnum && cfSpec) {
+  
+  } else if (cfuc && cfnum && cfSpec) {
     userChoices = upper.concat(numbers, special);
     console.log(userChoices);
-  }
   
-
-  else if (cflc && cfuc) {
+  } else if (cflc && cfuc) {
     userChoices = lower.concat(upper);
     console.log(userChoices);
-  }
-  else if (cflc && cfnum) {
+  
+  } else if (cflc && cfnum) {
     userChoices = lower.concat(numbers);
     console.log(userChoices);
-  }
-  else if (cflc && cfSpec) {
+  
+  } else if (cflc && cfSpec) {
     userChoices = lower.concat(special);
     console.log(userChoices);
-  }
-  else if (cfuc && cfnum) {
+  
+  } else if (cfuc && cfnum) {
     userChoices = upper.concat(numbers);
     console.log(userChoices);
-  }
-  else if (cfuc && cfSpec) {
+  
+  } else if (cfuc && cfSpec) {
     userChoices = upper.concat(special);
     console.log(userChoices);
-  }
-  else if (cfnum && cfSpec) {
+  
+  } else if (cfnum && cfSpec) {
     userChoices = numbers.concat(special);
     console.log(userChoices);
-  }
- 
-
-  else if (cflc) {
+  
+  } else if (cflc) {
     userChoices = lower;
     console.log(userChoices);
-  }
-  else if (cfuc) {
+  
+  } else if (cfuc) {
     userChoices = blankUpper.concat(upper);
     console.log(userChoices);
-  }
-  else if (cfnum) {
+  
+  } else if (cfnum) {
     userChoices = numbers;
     console.log(userChoices);
-  }
-  else if (cfSpec) {
+  
+  } else if (cfSpec) {
     userChoices = special;
     console.log(userChoices);
   };
 
-  
-  var pwBlank = [];
-  
+
+  var Blank = [];
+  var combinePW;
   
   for (var i = 0; i < pswl; i++) {
-    var allChoices = userChoices[Math.floor(Math.random() * userChoices.length)];
-    pwBlank.push(allChoices);
-    console.log(allChoices);
+    combinePW = userChoices[Math.floor(Math.random() * userChoices.length)];
+    Blank.push(combinePW);
+    console.log(combinePW);
   }
   
   
-  var password = pwBlank.join("");
+  var password = Blank.join("");
   console.log("Your Pasword is: " + password);
   return password;
   
