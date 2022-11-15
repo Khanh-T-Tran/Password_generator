@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- Scaling document/items to screen -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Password generator -->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!-- Title -->
+  <title>Password Generator</title>
+  <!-- Link to CSS file -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<!-- Body -->
+
+<body>
+  <!-- Wrap all content inside wrapper -->
+  <div class="wrapper">
+    <header>
+      <h1 class="title">Password Generator</h1>
+      <h3 class="password-display">Password</h3>
+      <form class="form">
+        <label for=""> Number Of Characters</label>
+        <div class="character-container">
+          <input type="range" min="8" max="25" value="10" id="characterRange">
+          <input class="input-number" type="number" min="8" max="25" value="10" id="characterNumber">
+        </div>
+
+        <label for="">Include Uppercase</label>
+        <input type="checkbox" id="includeUppercase">
+
+        <label for="">Include Numbers</label>
+        <input type="checkbox" id="includeNumbers">
+
+        <label for="">Include Symbols</label>
+        <input type="checkbox" id="includeSymbols">
+
+        <button type="submit" class="btn">Generate Password</button>
+
+      </form>
+
+    </header>
+
+
+    <!-- Link to JvS file -->
+    <script src="script.js"></script>
+</body>
+
+</html>

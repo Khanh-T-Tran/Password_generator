@@ -1,0 +1,78 @@
+body {
+  background-color: rgb(7, 161, 161);
+  margin: 0;
+  color: rgb(16, 12, 12);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  align-items: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.wrapper {
+  background-color: rgb(235, 235, 235);
+  padding: 3rem;
+  border-radius: 2rem;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+
+}
+
+.form {
+  display: grid;
+  grid-template-columns: auto auto;
+  row-gap: 1rem;
+  column-gap: 3rem;
+}
+
+label {
+  font-weight: bold;
+}
+
+.title {
+  margin: 0;
+  text-align: center;
+}
+
+.character-container {
+  display: flex;
+  align-items: center;
+}
+
+.input-number {
+  width: 2rem;
+}
+
+.password-display {
+  background-color: white;
+  color: black;
+  padding: 1rem;
+  border: 1px solid gray;
+  height: 2rem;
+  width: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  word-break: break-all;
+  border-radius: .5rem;
+}
+
+.btn {
+  grid-column: span 2;
+  background-color: transparent;
+  border: 2px solid white;
+  color: rgb(11, 1, 1);
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 1rem;
+  padding: .5rem 1rem;
+}
+
+.btn:hover {
+  background-color: rgb(60, 127, 242);
+}
