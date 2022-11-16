@@ -20,12 +20,12 @@
   <div class="wrapper">
     <header>
       <h1 class="title">Password Generator</h1>
-      <h3 class="password-display">Password</h3>
-      <form class="form">
+      <h3 class="password-display" id="passwordDisplay">Password</h3>
+      <form class="form" id="pwGeneratorForm">
         <label for=""> Number Of Characters</label>
         <div class="character-container">
-          <input type="range" min="8" max="25" value="10" id="characterRange">
-          <input class="input-number" type="number" min="8" max="25" value="10" id="characterNumber">
+          <!-- <input type="range" min="8" max="25" value="10" id="characterRange"> -->
+          <input class="input-number" type="number" min="8" max="128" value="10" id="characterNumber">
         </div>
 
         <label for="">Include Uppercase</label>
