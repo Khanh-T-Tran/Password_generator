@@ -4,6 +4,9 @@ const generateBtn = document.getElementById("btn");
 // Then we set password parameters for each element
 const characterRange = document.getElementById('characterRange');
 const characterNumber = document.getElementById('characterNumber');
+const upperCase = document.getElementById('includeUppercase');
+const numbers = document.getElementById('includeNumbers');
+const symbols = document.getElementById('includeSymbols');
 
 // create arrays to hold password parameters based on ASCii table: https://www.ascii-code.com/
 const UPPERCASE_CHAR_CODES = arrayFromLowToHigh(65, 90);
@@ -18,7 +21,7 @@ characterRange.addEventListener('input', syncCharacterLength)
 function syncCharacterLength(e) {
   const value = e.target.value
   characterNumber.value = value
-  characterRange.value = value
+  characterNumber.value = value
 }
 
 // generate array from low to high
@@ -36,13 +39,20 @@ passwordDisplay = document.getElementById('passwordDisplay')
 form.addEventListener('submit', e => {
   e.preventDefault()
   const pwLength = characterNumber.value;
-  const password = generatePassword(pwLength);
+  const includeUpperCase = upperCase.checked;
+  const includeNumbers = numbers.checked;
+  const includeSymbols = symbols.checked;
+
+  const password = generatePassword(pwLength, includeUpperCase, includeNumbers, includeSymbols);
   passwordDisplay.innerText = password
 })
 
 // logic for generating password
-function generatePassword(pwLength) {
-  let charCodes = LOWERCASE_CHAR_CODES.concat(UPPERCASE_CHAR_CODES, SYMBOL_CHAR_CODES, NUMBER_CHAR_CODES)
+function generatePassword(pwLength, includeUpperCase, includeNumbers, includeSymbols) {
+  let charCodes = LOWERCASE_CHAR_CODES
+  if (includeUpperCase) charCodes = charCodes.concat(UPPERCASE_CHAR_CODES)
+  if (includeSymbols) charCodes = charCodes.concat(SYMBOL_CHAR_CODES)
+  if (includeNumbers) charCodes = charCodes.concat(NUMBER_CHAR_CODES)
 
   const passwordCharacters = [];
   for (let i = 0; i < pwLength; i++) {
@@ -51,3 +61,4 @@ function generatePassword(pwLength) {
   }
   return passwordCharacters.join("")
 }
+

@@ -60,7 +60,7 @@ label {
   justify-content: center;
   align-items: center;
   word-break: break-all;
-  border-radius: .5rem;
+  overflow: auto;
 }
 
 .btn {
