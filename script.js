@@ -9,20 +9,10 @@ const numbers = document.getElementById('includeNumbers');
 const symbols = document.getElementById('includeSymbols');
 
 // create arrays to hold password parameters based on ASCii table: https://www.ascii-code.com/
-const UPPERCASE_CHAR_CODES = arrayFromLowToHigh(65, 90);
-const LOWERCASE_CHAR_CODES = arrayFromLowToHigh(97, 122);
-const NUMBER_CHAR_CODES = arrayFromLowToHigh(48, 57);
-const SYMBOL_CHAR_CODES = arrayFromLowToHigh(33, 47).concat(arrayFromLowToHigh(58, 64)).concat(arrayFromLowToHigh(91, 96)).concat(arrayFromLowToHigh(123, 126));
-
-// this part sync Range and Number of password input
-characterNumber.addEventListener('input', syncCharacterLength)
-characterRange.addEventListener('input', syncCharacterLength)
-
-function syncCharacterLength(e) {
-  const value = e.target.value
-  characterNumber.value = value
-  characterNumber.value = value
-}
+const UPPERCASE = arrayFromLowToHigh(65, 90);
+const LOWERCASE = arrayFromLowToHigh(97, 122);
+const NUMBER = arrayFromLowToHigh(48, 57);
+const SYMBOL = arrayFromLowToHigh(33, 47).concat(arrayFromLowToHigh(58, 64)).concat(arrayFromLowToHigh(91, 96)).concat(arrayFromLowToHigh(123, 126));
 
 // generate array from low to high
 function arrayFromLowToHigh(low, high) {
@@ -49,10 +39,10 @@ form.addEventListener('submit', e => {
 
 // logic for generating password
 function generatePassword(pwLength, includeUpperCase, includeNumbers, includeSymbols) {
-  let charCodes = LOWERCASE_CHAR_CODES
-  if (includeUpperCase) charCodes = charCodes.concat(UPPERCASE_CHAR_CODES)
-  if (includeSymbols) charCodes = charCodes.concat(SYMBOL_CHAR_CODES)
-  if (includeNumbers) charCodes = charCodes.concat(NUMBER_CHAR_CODES)
+  let charCodes = LOWERCASE
+  if (includeUpperCase) charCodes = charCodes.concat(UPPERCASE)
+  if (includeSymbols) charCodes = charCodes.concat(SYMBOL)
+  if (includeNumbers) charCodes = charCodes.concat(NUMBER)
 
   const passwordCharacters = [];
   for (let i = 0; i < pwLength; i++) {

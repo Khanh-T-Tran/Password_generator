@@ -19,15 +19,17 @@ body {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-
-
+  width: fit-content;
+  block-size: fit-content;
 }
 
 .form {
   display: grid;
   grid-template-columns: auto auto;
-  row-gap: 1.5rem;
-  column-gap: 3rem;
+  row-gap: 1rem;
+  column-gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
 }
 
 label {
@@ -52,10 +54,10 @@ label {
 .password-display {
   background-color: white;
   color: black;
-  padding: 1rem;
+  padding: 0.5rem;
   border: 1px solid gray;
   height: 2rem;
-  width: 440px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
