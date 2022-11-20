@@ -1,11 +1,21 @@
-# Password Generator Starter Code
+# Password Generator
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-## User Story
+## Table of Contents
+1. [Description](#Description)
+2. [User_Story](#User_Story)
+3. [Acceptance_Criteria](#Acceptance_Criteria)
+4. [Technologies](#Technologies)
+
+## Description
+This password generator allows users to choose secure level base on criteria such as length, uppercases, lowercases, numbers, and special characters. It also allow user to copy the generated password and past it on other text edit applications in user computer or mobile devices by a click of a button.
+
+## User_Story
 AS AN employee with access to sensitive data
 I WANT to randomly generate a password that meets certain criteria
 SO THAT I can create a strong password that provides greater security
 
-## Acceptance Criteria
+## Acceptance_Criteria
 ```
 GIVEN I need a new, secure password
 WHEN I click the button to generate a password
@@ -22,4 +32,13 @@ WHEN all prompts are answered
 THEN a password is generated that matches the selected criteria
 WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
-````
+```
+
+## Technologies
+```
+HTLM
+CSS
+JavaScript
+```
+
+## Deployment
