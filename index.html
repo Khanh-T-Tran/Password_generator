@@ -14,12 +14,17 @@
 </head>
 
 <!-- Body -->
+
 <body>
+
   <!-- Wrap all content inside wrapper -->
   <div class="wrapper">
     <header>
       <h1 class="title">Password Generator</h1>
-      <h3 class="password-display" id="passwordDisplay">Password</h3>
+      <div class="copy-container">
+        <textarea type="text" class="password-display" id="passwordDisplay">Password</textarea>
+        <span class="copy-icon"><img onclick="copyClipboard()" class="copy-image" src="./icons8-copy-48.png" /></span>
+      </div>
       <form class="form" id="pwGeneratorForm">
         <label for=""> Number Of Characters</label>
         <div class="character-container">

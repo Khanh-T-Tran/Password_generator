@@ -7,6 +7,8 @@ body {
   min-height: 100vh;
   align-items: center;
   font-family: Georgia, 'Times New Roman', Times, serif;
+  flex-direction: column;
+  
 }
 
 .wrapper {
@@ -21,6 +23,7 @@ body {
   justify-content: center;
   width: fit-content;
   block-size: fit-content;
+  row-gap: 1rem;
 }
 
 .form {
@@ -30,6 +33,7 @@ body {
   column-gap: 0.5rem;
   align-items: center;
   justify-content: center;
+  
 }
 
 label {
@@ -37,7 +41,7 @@ label {
 }
 
 .title {
-  margin: 0;
+  margin: 0 0 1rem 0;
   text-align: center;
 }
 
@@ -63,9 +67,10 @@ label {
   align-items: center;
   word-break: break-all;
   overflow: auto;
+  margin: 0 0 1rem 0;
 }
 
-.btn {
+.btn,.copyClipboard {
   grid-column: span 2;
   background-color: transparent;
   border: 2px solid white;
@@ -76,6 +81,36 @@ label {
   padding: .5rem 1rem;
 }
 
-.btn:hover {
+.btn:hover,.copyClipboard:hover {
   background-color: rgb(60, 127, 242);
+}
+
+.copy-container {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+}
+
+.copy-image:hover {
+  transform: scale(0.9);
+}
+
+@media only screen and (max-width: 450px) {
+  .input-number{
+    width: 2rem;
+    margin-left: 1rem;
+  }
+  /* .copy-container {
+    margin: 0;
+  } */
+  label {
+    font-size: small;
+  }
+  .form {
+    row-gap: 0.5rem;
+    column-gap: 0.2rem;
+  }
+  h1 {
+    transform: scale(0.8);
+  }
 }

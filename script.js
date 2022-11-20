@@ -47,8 +47,19 @@ function generatePassword(pwLength, includeUpperCase, includeNumbers, includeSym
   const passwordCharacters = [];
   for (let i = 0; i < pwLength; i++) {
     const characterCode = charCodes[Math.floor(Math.random() * charCodes.length)]
-    passwordCharacters.push(String.fromCharCode(characterCode))
+    passwordCharacters.push(String.fromCharCode(characterCode))  
   }
   return passwordCharacters.join("")
 }
 
+// add copy to clipboard function
+function copyClipboard() {
+  const copyText = document.getElementById("passwordDisplay");
+
+  // copyText.select();
+  copyText.setSelectionRange(0,99999);
+     // Copy the text inside the text field
+     navigator.clipboard.writeText(copyText.value);
+       // Alert the copied text
+  alert("Copied the text: " + copyText.value);  
+}
