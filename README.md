@@ -8,7 +8,7 @@
 4. [Technologies](#Technologies)
 
 ## Description
-This password generator allows users to choose secure level base on criteria such as length, uppercases, lowercases, numbers, and special characters. It also allow user to copy the generated password and past it on other text edit applications in user computer or mobile devices by a click of a button.
+This password generator allows users to choose secure level based on criteria such as length, uppercases, lowercases, numbers, and special characters. It also allow user to copy the generated password and past it on other text edit applications in user computer or mobile devices by a click of a button.
 
 ## User_Story
 AS AN employee with access to sensitive data
@@ -42,3 +42,4 @@ JavaScript
 ```
 
 ## Deployment
+https://khanh-t-tran.github.io/Password_generator/
